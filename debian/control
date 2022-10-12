@@ -1,0 +1,26 @@
+Source: libxpp2-java
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Emmanuel Bourg <ebourg@apache.org>
+Build-Depends: debhelper (>= 10), ant, default-jdk, maven-repo-helper
+Build-Depends-Indep: junit
+Standards-Version: 4.1.1
+Vcs-Git: https://anonscm.debian.org/git/pkg-java/libxpp2-java.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-java/libxpp2-java.git
+Homepage: http://www.extreme.indiana.edu/xgws/xsoap/xpp/xpp2/
+
+Package: libxpp2-java
+Architecture: all
+Depends: ${misc:Depends}
+Description: XML pull parser library for java V2
+ Xml Pull Parser (in short XPP) is a streaming pull XML parser for java.
+ This version XPP2 is the predecessor of XPP3 (see package libxpp3-java).
+ .
+ XPP2 consists of two parts: generic API and its implementations. This 
+ Debian version only provides the default implementation optimized for
+ size and speed and is not exposing DTD, entities, comments, or processing 
+ instructions to the user.
+ .
+ If you need a xml pull parser implementing the XmlPull API you want to
+ have a look at the libxpp3-java package.

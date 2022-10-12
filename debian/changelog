@@ -1,0 +1,82 @@
+libxpp2-java (2.1.10-8) unstable; urgency=medium
+
+  * Team upload.
+  * Install the Maven artifacts
+  * Fixed the build failure with Java 9
+  * Removed Michael Koch from the uploaders (Closes: #654105)
+  * No longer install the javadoc in the library package
+  * Build with the DH sequencer instead of CDBS
+  * Moved the package to Git
+  * Standards-Version updated to 4.1.1
+  * Switch to debhelper level 10
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Sat, 14 Oct 2017 22:53:35 +0200
+
+libxpp2-java (2.1.10-7) unstable; urgency=low
+
+  * Team upload.
+  * Switch to source format 3.0.
+  * Minor cleanups in d/rules.
+  * Remove Java runtime from Depends.
+  * Remove old patches because they did not apply.
+  * Add a new patch to update Java version to 1.2.
+
+ -- Torsten Werner <twerner@debian.org>  Thu, 18 Aug 2011 14:20:45 +0200
+
+libxpp2-java (2.1.10-6) unstable; urgency=low
+
+  * Make package Depends on java runtime alternatives.
+    Thanks to Justus Piater.
+  * Added Homepage, Vcs-Browser and Vcs-Svn fields
+
+ -- Michael Koch <konqueror@gmx.de>  Mon, 28 Sep 2009 11:26:35 +0200
+
+libxpp2-java (2.1.10-5) unstable; urgency=low
+
+  * (Build-)Depends on default-jdk.
+  * Build-depends on debhelper >= 7.
+  * Moved debhelper, cdbs and ant to Build-Depends.
+  * Let libxpp2-java Depends on ${misc:Depends}.
+  * Fixed typo in long description.
+  * Converted debian/copyright to UTF-8.
+  * Removed Wolfgang and added myself to Uploaders.
+  * Updated Standards-Version to 3.8.3.
+
+ -- Michael Koch <konqueror@gmx.de>  Mon, 14 Sep 2009 22:14:21 +0200
+
+libxpp2-java (2.1.10-4) unstable; urgency=low
+
+  * Removed explicit usage of jikes build compiler property
+    for kaffe jikes -> ecj transition
+  * Added patch to raise build target to 1.3 - required for ecj
+
+ -- Wolfgang Baer <WBaer@gmx.de>  Fri,  6 Jan 2006 19:01:08 +0100
+
+libxpp2-java (2.1.10-3) unstable; urgency=low
+
+  * Added ant-optional due to ant reorganization
+  * Registered javadoc apis with doc-base
+
+  * Upload sponsored by Arnaud Vandyck
+
+ -- Wolfgang Baer <WBaer@gmx.de>  Fri, 16 Sep 2005 15:46:04 +0200
+
+libxpp2-java (2.1.10-2) unstable; urgency=low
+
+  * Upload to unstable
+  * Changed libant1.6-java build-dep to ant
+  * Standards-Version 3.6.2 (no changes)
+
+  * Upload sponsored by Petter Reinholdtsen
+
+ -- Wolfgang Baer <WBaer@gmx.de>  Sat, 13 Aug 2005 13:56:43 +0200
+
+libxpp2-java (2.1.10-1) experimental; urgency=low
+
+  * Initial Release (closes: #305229)
+  * Enabled junit tests
+  * Patched build.xml to exclude SAX/JAXP interfaces from jar
+    + This way it compiles against the SAX/JAXP API of kaffe
+
+ -- Wolfgang Baer <WBaer@gmx.de>  Sat, 23 Apr 2005 15:23:09 +0200
+

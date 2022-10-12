@@ -1,0 +1,10 @@
+From the original upstream distribution the prebuilt
+jar files and the prebuilt sources were removed:
+
+rm -rf build
+rm lib/ant/*.jar lib/ant/*.ja
+rm lib/junit/*.jar
+rm lib/midpapi/*.jar
+rm lib/xerces2_patched/*.jar
+
+Also the prebuild api documentation was removed.

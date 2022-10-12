@@ -1,0 +1,1 @@
+debian/pull-parser.pom --has-package-version --java-lib --artifact=build/lib/PullParser-2.1.10.jar --usj-name=xpp2

@@ -1,0 +1,50 @@
+Description: Fixes the build failure with Java 9
+Author: Emmanuel Bourg <ebourg@apache.org>
+Forwarded: no
+--- a/src/java/impl/node/org/gjt/xpp/impl/node/Node.java
++++ b/src/java/impl/node/org/gjt/xpp/impl/node/Node.java
+@@ -273,9 +273,9 @@
+         oneChild = null;
+ 
+         if(children != null && children.size() > 0) {
+-            Enumeration enum = children.elements();
+-            while (enum.hasMoreElements()) {
+-                Object child = enum.nextElement();
++            Enumeration enumeration = children.elements();
++            while (enumeration.hasMoreElements()) {
++                Object child = enumeration.nextElement();
+                 if(child instanceof XmlNode) {
+                     ((XmlNode)child).setParentNode(null);
+                 }
+--- a/src/java/tests/node/NodeTest.java
++++ b/src/java/tests/node/NodeTest.java
+@@ -386,20 +386,20 @@
+         assertEquals("", t1.getDefaultNamespaceUri());
+ 
+         // check enumeration stuff...
+-        Enumeration enum = t1.children();
++        Enumeration enumeration = t1.children();
+         assertEquals(0, t1.getChildrenCountSoFar());
+         //child1, child2...
+-        assertTrue(enum.hasMoreElements());
+-        child1 = (XmlPullNode) enum.nextElement();
++        assertTrue(enumeration.hasMoreElements());
++        child1 = (XmlPullNode) enumeration.nextElement();
+         assertEquals("child1", child1.getLocalName());
+-        assertNotNull(enum.nextElement());
+-        child3 = (XmlPullNode) enum.nextElement();
++        assertNotNull(enumeration.nextElement());
++        child3 = (XmlPullNode) enumeration.nextElement();
+         assertEquals("child3", child3.getLocalName());
+-        assertNotNull(enum.nextElement());
++        assertNotNull(enumeration.nextElement());
+         assertEquals(4, t1.getChildrenCountSoFar());
+-        assertEquals(true, enum.hasMoreElements());
+-        assertNotNull(enum.nextElement());
+-        assertEquals(false, enum.hasMoreElements());
++        assertEquals(true, enumeration.hasMoreElements());
++        assertNotNull(enumeration.nextElement());
++        assertEquals(false, enumeration.hasMoreElements());
+ 
+         XmlPullNode t2 = (XmlPullNode) node.getChildAt(1);
+         assertEquals("t2", t2.getLocalName());

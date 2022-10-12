@@ -1,0 +1,22 @@
+From: Torsten Werner <twerner@debian.org>
+Date: Thu, 18 Aug 2011 14:17:09 +0200
+Subject: [PATCH] update Java version to 1.2
+
+---
+ build.xml |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/build.xml b/build.xml
+index 21c872f..0dfc9bd 100644
+--- a/build.xml
++++ b/build.xml
+@@ -9,7 +9,7 @@
+   <property name="midp4palm.home" value="c:/util/midp4palm1.0" />
+ 
+ 
+-  <property name="target" value="1.1" />
++  <property name="target" value="1.2" />
+   <!-- set global properties for this build -->
+ 
+   <property name="name" value="XML Pull Parser"/>
+-- 
